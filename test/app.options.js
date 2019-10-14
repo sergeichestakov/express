@@ -2,7 +2,20 @@
 var express = require('../')
   , request = require('supertest');
 
-xdescribe('OPTIONS', function(){
+describe('OPTIONS', function(){
+  it("should not include HEAD when GET is not present", function(done){
+    var app = express();
+
+    app.del('/users', function(){});
+    app.post('/users', function(req, res){});
+    app.put('/users', function(req, res){});
+
+    request(app)
+    .options('/users')
+    .expect('Allow', 'DELETE,POST,PUT')
+    .expect(200, 'DELETE,POST,PUT', done);
+  })
+
   it('should default to the routes defined', function(done){
     var app = express();
 
