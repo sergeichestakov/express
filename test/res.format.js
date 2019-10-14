@@ -67,7 +67,7 @@ app4.use(function(err, req, res, next){
   res.send(err.status, 'Supports: ' + err.types.join(', '));
 })
 
-describe('res', function(){
+xdescribe('res', function(){
   describe('.format(obj)', function(){
     describe('with canonicalized mime types', function(){
       test(app1);

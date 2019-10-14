@@ -5,7 +5,7 @@ function getCookie(res) {
   return res.headers['set-cookie'][0].split(';')[0];
 }
 
-describe('auth', function(){
+xdescribe('auth', function(){
   describe('GET /',function(){
     it('should redirect to /login', function(done){
       request(app)

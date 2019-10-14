@@ -2,7 +2,7 @@
 var express = require('../')
   , request = require('supertest');
 
-describe('res', function(){
+xdescribe('res', function(){
   describe('.redirect(url)', function(){
     it('should default to a 302 redirect', function(done){
       var app = express();

@@ -8,7 +8,7 @@ var path = require('path');
 var should = require('should');
 var fixtures = path.join(__dirname, 'fixtures');
 
-describe('res', function(){
+xdescribe('res', function(){
   describe('.sendFile(path)', function () {
     it('should error missing path', function (done) {
       var app = createApp();

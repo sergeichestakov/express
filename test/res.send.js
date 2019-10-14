@@ -3,7 +3,7 @@ var express = require('../')
   , request = require('supertest')
   , assert = require('assert');
 
-describe('res', function(){
+xdescribe('res', function(){
   describe('.send(null)', function(){
     it('should set body to ""', function(done){
       var app = express();
